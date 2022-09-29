@@ -18,7 +18,7 @@ h2 {
 	left: 50%;
 	top: 20%;
 	transform: translateX(-50%);
-	white-space: no wrap;
+	white-space: nowrap;
 }
 
 .left h2 {
@@ -125,4 +125,23 @@ h2 {
 
 .expand.split.right::before {
 	background-color: rgb(38, 43, 44, 0);
+}
+
+@media (max-width: 840px) {
+	h2 {
+		font-size: 1.4rem;
+	}
+
+	.btn {
+		font-size: 1rem;
+		padding: 0.4rem 0.8rem;
+	}
+
+	.expand {
+		width: 58%;
+	}
+
+	.collapse {
+		width: 42%;
+	}
 }
