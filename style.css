@@ -8,9 +8,116 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 62.5%;
 	margin: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	overflow: hidden;
+	height: 100vh;
+}
+
+h2 {
+	font-size: 2.4rem;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform: translateX(-50%);
+	white-space: no wrap;
+}
+
+.left h2 {
+	/* color: rgb(38, 43, 44, 0.8);
+	text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); */
+	color: rgb(244, 245, 246, 0.8);
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.right h2 {
+	color: rgb(244, 245, 246, 0.8);
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.btn {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translateX(-50%);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	font-weight: 700;
+	font-family: inherit;
+	background-color: rgb(38, 43, 44, 0.8);
+	padding: 0.8rem 1.6rem;
+	color: #f4f5f6;
+	border-radius: 4px 4px;
+	box-shadow: 2px 2px 16px 2px rgba(255, 255, 255, 0.75);
+}
+
+.btn:hover {
+	background-color: rgb(244, 245, 246, 0.6);
+	color: #262b2c;
+	box-shadow: 2px 2px 12px 2px rgb(38, 43, 44, 0.75);
+}
+
+.btn:active {
+	transform: translateY(2px) translateX(-49%) scale(0.98);
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #262b2c;
+}
+
+.split {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.left {
+	left: 0;
+	background: url(https://images.unsplash.com/photo-1571028634586-ae87c1a42432?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1886&q=80);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+
+.split.left::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(38, 43, 44, 0.4);
+}
+
+.right {
+	right: 0;
+	background: url(https://images.unsplash.com/photo-1655890938539-7257cdd5ea34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.split.right::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(38, 43, 44, 0.4);
+}
+
+.expand {
+	width: 65%;
+}
+
+.collapse {
+	width: 35%;
+}
+
+.expand.split.left::before {
+	background-color: rgb(38, 43, 44, 0.2);
+}
+
+.expand.split.right::before {
+	background-color: rgb(38, 43, 44, 0);
 }
